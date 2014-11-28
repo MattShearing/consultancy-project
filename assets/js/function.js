@@ -1,6 +1,5 @@
 function getTime() {
     var list = [];
-    console.log(player.getPlayerState():Number);
     var time = document.getElementById("video_time").innerHTML;
     list.push(time);
     showList(list);
