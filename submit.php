@@ -25,7 +25,14 @@ $data = array();
 	echo '</pre>';
 
 	//need connection to database
-	//$con = ($localhost, $db, $user, $pass)
+	
+	//$host = "localhost";
+	//$db = "uocvideo";
+	//$user = "uocvideo";
+	//$pass = "video99";
+
+	//$con = mysql_pconnect($host, $user, $pass) or die(mysql_error());
+
 
 	//need sql to insert data to table
 	//$sql = insert into $tbl 
