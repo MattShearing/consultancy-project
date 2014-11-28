@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="assets/style.css">
+
+</head>
+
   <body>
     <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
     <div id="player"></div>
@@ -54,7 +60,7 @@
         // if (timestamp - old_timestamp < 1second) {
               //return false
         // } else { create input
-        document.getElementById("display_time").innerHTML += "<input type='text' id='" + timestamp + "' name='" + timestamp + "' value='" + timestamp + "'>";
+        document.getElementById("display_time").innerHTML += "<input type='text' id='" + timestamp + "' name='" + timestamp + "' style='display:none;' value='" + timestamp + "'>";
       }
     
       function submit() {
