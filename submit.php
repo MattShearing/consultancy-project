@@ -18,7 +18,7 @@ function formatSeconds( $seconds )
 
 
   return str_pad( $hours, 2, '0', STR_PAD_LEFT )
-       . gmdate( ':i:s', $seconds, )
+       . gmdate( ':i:s', $seconds )
        . ($milliseconds ? ".$milliseconds" : '')
   ;
 }
