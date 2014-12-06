@@ -3,13 +3,15 @@
         <link rel="stylesheet" type="text/css" href="assets/style.css">
     </head>
     <body>
+        <?php $url = $_GET["v"]; ?>
         <!-- <video width="320" height="240" controls>
             <source src="movie.mp4" type="video/mp4">
         </video> -->
         <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
-        <iframe id="player" height="390" width="640" src="http://www.youtube.com/embed/41GNacjIh3A?enablejsapi=1&origin=http://uocvideo.sytes.net"></iframe>        
+        <iframe id="player" height="390" width="640" src="http://www.youtube.com/embed/<?php echo $url;?>?enablejsapi=1&origin=http://uocvideo.sytes.net"></iframe>        
         <button onClick="setTime()">Click</button>
         <form method="POST" action="submit.php">
+            <input type="text" id="url" name="url" style="display:none;" value="<?php echo $url; ?>">
             <p id="display_time"></p>
             <input type="submit" id="submit">
         </form>  
