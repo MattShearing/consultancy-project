@@ -23,9 +23,12 @@ function formatSeconds( $seconds )
   ;
 }
 
-	foreach ($_POST as $posted)  {
-		$data[] = formatSeconds( $posted);
-
+	foreach ($_POST as $key => $posted)  {
+		if ($key == 'url') {
+			$url = $posted;
+		} else {
+			$data[] = formatSeconds($posted);
+		}
 	}
 
 //print array and display array in a formatted structure 	
@@ -44,6 +47,7 @@ function formatSeconds( $seconds )
 	echo '<pre>';
 	print_r($decrypt);
 	echo '</pre>';
+	echo $url;
 
 	//need connection to database
 	
