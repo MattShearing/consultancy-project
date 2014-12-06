@@ -23,9 +23,10 @@ function formatSeconds( $seconds )
   ;
 }
 
-	foreach ($_POST as $posted)  {
-		$data[] = formatSeconds( $posted);
 
+//run a loop to pull out the times 
+	foreach ($_POST as $posted)  {
+		$data[] = formatSeconds($posted);
 	}
 
 //print array and display array in a formatted structure 	
@@ -56,5 +57,5 @@ function formatSeconds( $seconds )
 
 
 	//need sql to insert data to table
-	//$sql = insert into $tbl 
+	//$sql = INSERT INTO $tbl WHERE = '' AND = ''
 ?>
