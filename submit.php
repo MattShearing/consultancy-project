@@ -25,8 +25,8 @@ function formatSeconds( $seconds )
 
 //run a loop to pull out the times 
 	foreach ($_POST as $key => $posted)  {
-		if ($key == 'url') {
-			$url = $posted;
+		if ($key == 'vid_id') {
+			$vid_id = $posted;
 		} else {
 			$data[] = formatSeconds($posted);
 		}
@@ -48,7 +48,7 @@ function formatSeconds( $seconds )
 	echo '<pre>';
 	print_r($decrypt);
 	echo '</pre>';
-	echo $url;
+	echo $vid_id;
 
 	//need connection to database
 	
