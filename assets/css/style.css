@@ -48,7 +48,11 @@ padding-top: 10;
 	text-transform:uppercase;;
 
 }
+
 .account{
-	float:right;
-	display:inline-block;
+	float: right;
+}
+
+.welcome {
+	float:left;
 }
