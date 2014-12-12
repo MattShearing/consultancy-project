@@ -5,7 +5,7 @@
     $result = mysqli_query($con, "SELECT * FROM content");
 ?>
 
-    <title>Home</title>
+    <title>Videos</title>
 </head>
 
 
