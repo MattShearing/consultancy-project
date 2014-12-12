@@ -9,9 +9,14 @@
         <ul>
             <?php
                 while ($row = mysqli_fetch_array($result)) {
-                    $parts =  explode('=', $row['videourl']);
+                    if (strpos($row['videourl'], 'assets') !== false) {
+                        $url =  $row['videourl'];
+                    } else {
+                        $parts =  explode('=', $row['videourl']);
+                        $url = 'http://www.youtube.com/embed/' . $parts[1];
+                    }
             ?>
-                    <a href="video.php?v=<?php echo $parts[1]; ?>"><li><?php echo $row['title']; ?></li></a>
+                    <a href="video.php?v=<?php echo $url; ?>"><li><?php echo $row['title']; ?></li></a>
             <?php
                 }
             ?>
