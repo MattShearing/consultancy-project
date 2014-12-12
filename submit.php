@@ -37,8 +37,6 @@ function formatSeconds( $seconds )
 //print array and display array in a formatted structure 	
 	$string = serialize($data);
 	$encoded = base64_encode($string);
-	$decrypt = base64_decode($encoded);
-	$decrypt = unserialize($decrypt);
 	$username = 'Test';
 
 	if (mysqli_query($con, "INSERT INTO clicklog (username, timestamps, title) VALUES ('$username', '$encoded', '$vid_id')")) {
