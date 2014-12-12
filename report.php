@@ -26,3 +26,25 @@
         </div>
     </body>
 </html>
+
+<?php
+
+// //$array1;
+// $array2 = $data;
+
+// foreach ($array1 as $key => $value1) {
+//     foreach ($array2 as $key => $value2) {
+//     //value2 = clicktime
+//     // value1[0] = start
+//     //value1[1] = end
+//         if ($key = 'times') { 
+//             if ($value2 > $value1[0] AND $value2 < $value1[1] AND !isset($correct)) {
+//                 $correct = 'yes';
+//             } else {
+//                 $correct = 'false';
+//             }
+//         }
+//     }
+// }
+
+?>
