@@ -11,7 +11,7 @@
 
    
     <body>
-        <div class="homebox">
+        <div class="container">
             <ul>
                 <?php
                     while ($row = mysqli_fetch_array($result)) {

@@ -6,6 +6,7 @@
         ?>
     </head>
     <body>
+    <div class="container">
         <!-- <video width="320" height="240" controls>
             <source src="movie.mp4" type="video/mp4">
         </video> -->
@@ -24,7 +25,8 @@
             <input type="text" id="vid_id" name="vid_id" style="display:none;" value="<?php echo $vid_id; ?>">
             <p id="display_time"></p>
             <input type="submit" id="submit">
-        </form>  
+        </form> 
+    </div> 
         <script>
             // 2. This code loads the IFrame Player API code asynchronously.
             var tag = document.createElement('script');
@@ -68,5 +70,6 @@
                 document.getElementById("submit").click();
             }
         </script>
+
     </body>
 </html>
