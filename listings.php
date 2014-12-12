@@ -1,12 +1,11 @@
 <?php
     include 'dbconnect.php';
+    include 'header.php';
     $result = mysqli_query($con, "SELECT * FROM content");
 ?>
 <html>
     <head>
-
-    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
-
+    <title>Home</title>
     </head>
     <body>
         <div class="homebox">
