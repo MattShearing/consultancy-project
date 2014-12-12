@@ -45,7 +45,7 @@ padding-top: 10;
 	color:white;
 	text-decoration:none;
 	font-weight:normal;
-	text-transform:uppercase;;
+	text-transform:uppercase;
 
 }
 
@@ -55,4 +55,14 @@ padding-top: 10;
 
 .welcome {
 	float:left;
+}
+
+.login-box, .register-box {
+	margin: auto;
+	top: 50px;
+	width: 180px;
+	height: 180px;
+	border:1px solid;
+	padding: 10px;
+	margin-top: 10px;
 }
