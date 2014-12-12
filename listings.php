@@ -13,19 +13,12 @@
             <ul>
                 <?php
                     while ($row = mysqli_fetch_array($result)) {
-                        if (strpos($row['videourl'], 'assets') !== false) {
-                            $url =  $row['videourl'];
-                        } else {
-                            $parts =  explode('=', $row['videourl']);
-                            $url = 'http://www.youtube.com/embed/' . $parts[1];
-                        }
-                ?>
-                        <a href="video.php?v=<?php echo $url; ?>"><li><?php echo $row['title']; ?></li></a>
-                <?php
+                        $url =  $row['id'];
+                        echo '<a href="video.php?v='. $url . '"><li>'. $row['title'] . '</li></a>';
                     }
-                ?>
+                ?>  
             </ul>
-        <div>
+        </div>
     </body>
 </html>
 

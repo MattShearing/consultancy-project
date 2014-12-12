@@ -1,12 +1,24 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="assets/style.css">
+        <?php
+            include 'dbconnect.php';
+            $vid_id = $_GET["v"];
+            $result = mysqli_query($con, "SELECT * FROM content WHERE id=$vid_id");
+        ?>
     </head>
     <body>
-        <?php $url = $_GET["v"]; ?>
         <!-- <video width="320" height="240" controls>
             <source src="movie.mp4" type="video/mp4">
         </video> -->
+        <?php while ($row = mysqli_fetch_array($result)) {
+                if (strpos($row['videourl'], 'assets') !== false) {
+                $url =  $row['videourl'];
+            } else {
+                $parts =  explode('=', $row['videourl']);
+                $url = 'http://www.youtube.com/embed/' . $parts[1];
+            }
+        } ?>
         <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
         <iframe id="player" height="390" width="640" src="<?php echo $url;?>?enablejsapi=1&origin=http://uocvideo.sytes.net"></iframe>        
         <button onClick="setTime()">Click</button>
