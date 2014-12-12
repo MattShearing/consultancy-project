@@ -7,6 +7,7 @@
     </head>
     <body>
         <div class="container">
+            <p><button onClick="addNew()">New Point</button></p>
             <form action="insert_params.php" method="POST">
                 <p>
                     <label for="video_id">Video: </label>
@@ -16,7 +17,6 @@
                     } ?>
                     </select>
                 </p>
-                <p onClick="addNew()">New Point</p>
                 <div id="count" class="hidden">1</div>
                 <div id="input_fields">
                     <p>
