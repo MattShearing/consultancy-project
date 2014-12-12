@@ -14,7 +14,7 @@
         <div class="container">
             <?php
 
-               if (isset($user)) {?>
+                if (isset($user)) {?>
                     <ul>
                        <li><a href="listings.php">Videos</a></li>
                        <li><a href="#">Reports</a></li>
@@ -26,8 +26,9 @@
                     
                     <form action="user-login.php" method="POST">
    
-                            <div class="login-box">
-                                <div>
+                        <div class="login-box">
+                            
+                            <div>
                                 <p>Username:</p>
                                 <p><input type="text" name="username" id="username" /></p>
                 
@@ -41,6 +42,7 @@
                         </div>
 
                     </form>
+
                 <?php } ?>
             
         </div>
