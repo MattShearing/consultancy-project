@@ -4,4 +4,10 @@ input[type=text]{
 .homebox {
 	width:50%;
 	margin:auto;
+	background:white;
+	border-radius:10px;
+	padding:10px 0px;
+}
+body{
+	background:#efefef;
 }
