@@ -1,7 +1,6 @@
 <html>
 
 <?php
-    include 'dbconnect.php';
     include 'header.php';
     $result = mysqli_query($con, "SELECT * FROM content");
 ?>

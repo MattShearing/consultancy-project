@@ -1,8 +1,6 @@
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="assets/style.css">
         <?php
-            include 'dbconnect.php';
+            include 'header.php';
             $vid_id = $_GET["v"];
             $result = mysqli_query($con, "SELECT * FROM content WHERE id=$vid_id");
         ?>
