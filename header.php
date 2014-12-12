@@ -33,7 +33,7 @@ header('Location: index.php');
 			}
 			else {
 				if ($_GET['log']=='false') {
-					echo 'something';
+					echo '<div class="user-notice">No user currently logged in</div>';
 				} else {
 					header('Location: index.php?log=false');
 				}
