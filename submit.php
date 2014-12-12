@@ -1,4 +1,6 @@
-<?php 
+<?php
+
+include 'dbconnect.php';
 
 //create array based on the data posted from previous page (clicks submitted) 
 $data = array();
@@ -33,33 +35,20 @@ function formatSeconds( $seconds )
 	}
 
 //print array and display array in a formatted structure 	
-	echo '<pre>';
-	print_r($data);
-	echo '</pre>';
-
 	$string = serialize($data);
-	echo "Serialized: " . $string . "<br>";
-	$string = base64_encode($string);
-	echo "Encoded: " . $string . "<br>";
-	$decrypt = base64_decode($string);
-	echo "Decoded: " . $decrypt . "<br>";
+	$encoded = base64_encode($string);
+	$decrypt = base64_decode($encoded);
 	$decrypt = unserialize($decrypt);
-	echo "Unserialized: ";
-	echo '<pre>';
-	print_r($decrypt);
-	echo '</pre>';
-	echo $vid_id;
+	$username = 'Test';
 
-	//need connection to database
-	
-	//$host = "localhost";
-	//$db = "uocvideo";
-	//$user = "uocvideo";
-	//$pass = "video99";
-
-	//$con = mysql_pconnect($host, $user, $pass) or die(mysql_error());
-
-
-	//need sql to insert data to table
-	//$sql = INSERT INTO $tbl WHERE = '' AND = ''
+	if (mysqli_query($con, "INSERT INTO clicklog (username, timestamps, title) VALUES ('$username', '$encoded', '$vid_id')")) {
+		echo "New record created succesfully";
+		$result = mysqli_query($con, "SELECT * FROM clicklog WHERE username='$username' AND title='$vid_id' AND timestamps='$encoded'");
+		while ($row = mysqli_fetch_array($result)) {
+			$report = 'report.php?id='.$row['id'];
+			header('Location: '.$report);
+		}
+	} else {
+		echo "Error: " . mysqli_error($con);
+	}
 ?>
