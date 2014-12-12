@@ -1,4 +1,7 @@
 input[type=text]{
 	display:none;
 }
-
+.homebox {
+	width:50%;
+	margin:auto;
+}
