@@ -23,19 +23,13 @@ function formatSeconds( $seconds )
   ;
 }
 
-<<<<<<< HEAD
-
 //run a loop to pull out the times 
-	foreach ($_POST as $posted)  {
-		$data[] = formatSeconds($posted);
-=======
 	foreach ($_POST as $key => $posted)  {
 		if ($key == 'url') {
 			$url = $posted;
 		} else {
 			$data[] = formatSeconds($posted);
 		}
->>>>>>> origin/master
 	}
 
 //print array and display array in a formatted structure 	
