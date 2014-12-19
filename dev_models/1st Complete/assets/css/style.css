@@ -1,0 +1,259 @@
+@media all and (min-width: 800px) and (max-width: 1920px) {
+.hidden {
+	display:none;
+}
+
+body{
+	background:#efefef;
+	margin:0;
+}
+
+.container {
+	width:50%;
+	margin:auto;
+	background:white;
+	border-bottom-left-radius:10px;
+	border-bottom-right-radius:10px;
+	padding:10px 5%;
+	overflow:hidden;;;
+}
+
+.container ul {
+	list-style-type: none;
+}
+
+.container ul a {
+	text-decoration: none;
+	color: darkblue;
+	line-height: 25px;
+}
+
+.container li {
+line-height: 25px;
+}
+
+.nav {
+width: 100%;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+background: darkblue;
+height: 30px;
+padding-top: 10;
+}
+
+.nav a{
+	color:white;
+	text-decoration:none;
+	font-weight:normal;
+	padding:20px;
+	text-transform:uppercase;
+
+}
+
+.account{
+	float: right;
+}
+
+.welcome {
+	float:left;
+}
+
+.login-box, .register-box {
+	margin: auto;
+	top: 50px;
+	width: 180px;
+	height: 180px;
+	border:outset#efefef;
+	padding: 10px;
+	margin-top: 10px;
+}
+
+.user-notice {
+	color:white;
+	padding-right:10px;	
+}
+
+.account a {
+	padding:0px;
+	margin-right:10px;
+}
+
+.account a:hover {
+	text-decoration:underline;
+}
+
+}
+
+@media all and (min-width: 476px) and (max-width: 799px) {
+
+.hidden {
+	display:none;
+}
+
+body{
+	background:#efefef;
+	margin:0;
+}
+
+.container {
+	width:65%;
+	margin:auto;
+	background:white;
+	border-bottom-left-radius:10px;
+	border-bottom-right-radius:10px;
+	padding:10px 5%;
+	overflow:hidden;;;
+}
+
+.container ul {
+	list-style-type: none;
+}
+
+.container ul a {
+	text-decoration: none;
+	color: darkblue;
+	line-height: 25px;
+}
+
+.container li {
+line-height: 25px;
+}
+
+.nav {
+width: 100%;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+background: darkblue;
+height: 30px;
+padding-top: 10;
+}
+
+.nav a{
+	color:white;
+	text-decoration:none;
+	font-weight:normal;
+	padding:20px;
+	text-transform:uppercase;
+
+}
+
+.account{
+	float: right;
+}
+
+.welcome {
+	float:left;
+}
+
+.login-box, .register-box {
+	margin: auto;
+	top: 50px;
+	width: 180px;
+	height: 180px;
+	border:outset#efefef;
+	padding: 10px;
+	margin-top: 10px;
+}
+
+.user-notice {
+	color:white;
+	padding-right:10px;	
+}
+
+.account a {
+	padding:0px;
+	margin-right:10px;
+}
+
+.account a:hover {
+	text-decoration:underline;
+}
+}
+
+@media all and (min-width: 0px) and (max-width: 475px) {
+.hidden {
+	display:none;
+}
+
+body{
+	background:#efefef;
+	margin:0;
+}
+
+.container {
+	width:65%;
+	margin:auto;
+	background:white;
+	border-bottom-left-radius:10px;
+	border-bottom-right-radius:10px;
+	padding:10px 5%;
+	overflow:hidden;
+}
+
+.container ul {
+	list-style-type: none;
+}
+
+.container ul a {
+	text-decoration: none;
+	color: darkblue;
+	line-height: 25px;
+}
+
+.container li {
+line-height: 25px;
+}
+
+.nav {
+width: 100%;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+background: darkblue;
+height: 65px;
+text-align: center;
+padding-top: 10;
+list-style-type: none;
+}
+
+.nav a{
+	color:white;
+	text-decoration:none;
+	font-weight:normal;
+	text-transform:uppercase;
+
+}
+
+.welcome {
+}
+
+.welcome a:hover {
+	text-decoration:underline;
+}
+
+.login-box, .register-box {
+	margin: auto;
+	top: 50px;
+	width: 180px;
+	height: 180px;
+	border:outset#efefef;
+	padding: 10px;
+	margin-top: 10px;
+}
+
+.user-notice {
+	color:white;
+	padding-right:10px;	
+}
+.account{
+}
+
+.account a {
+	padding:0px;
+	margin-right:10px;
+	display:list-item;
+}
+
+.account a:hover {
+	text-decoration:underline;
+}
+
