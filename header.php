@@ -28,7 +28,7 @@ header('Location: index.php');
 			session_start();
 			if (isset($_SESSION['user']) && $_SESSION['user'] <> '') {
 				$user = $_SESSION['user'];
-				echo '<a href="#">Logged in as '.$user.'</a>';
+				echo '<a href="admin.php">Logged in as '.$user.'</a>';
 				echo '<a href="?logout=true">Logout</a>';
 			}
 			else {
