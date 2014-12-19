@@ -3,7 +3,7 @@
 include_once('dbconnect.php');
 
 $username=trim($_POST['username']);
-$password=$_POST['password'];
+$password=md5($_POST['password']);
 
 $tbl_users = 'users';
 
@@ -26,7 +26,8 @@ $result = mysqli_query($con, $sql);
 while ($row = mysqli_fetch_array($result)) {
 	session_start();
 	$_SESSION['user'] = $row['username'];
-	//echo $_SESSION['user']; exit;
+	$_SESSION['level'] = $row['permission'];
+	//echo $_SESSION['level']; exit;
   } 
 
   //echo'hello';
