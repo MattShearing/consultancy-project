@@ -27,6 +27,10 @@ td {
 	padding: 4px;
 }
 
+tr.false {
+	color: red;
+}
+
 .container {
 	width:50%;
 	margin:auto;
