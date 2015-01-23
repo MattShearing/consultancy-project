@@ -1,7 +1,7 @@
 <head>
 
 <?php include 'dbconnect.php'; ?>
-
+<meta name="viewport" content="width=device-width">
 <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
 
 <?php
