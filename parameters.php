@@ -3,7 +3,6 @@
             include 'header.php';
             $result = mysqli_query($con, "SELECT * FROM content");
         ?>
-        <script language="javascript" type="text/javascript" src="assets/js/function.js"></script>
     </head>
     <body>
         <div class="container">
