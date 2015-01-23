@@ -14,7 +14,7 @@
         <div class="container">
 
             <?php
-                $clicks = mysqli_query($con, "SELECT * FROM clicklog");
+                $clicks = mysqli_query($con, "SELECT * FROM clicklog WHERE username = '$user'");
                 while ($row = mysqli_fetch_array($clicks)) {
                     $video[$row['title']] = $row['id'];
                 }

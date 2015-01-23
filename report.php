@@ -42,14 +42,22 @@
                         }
                     }
                 }
-                $content .= '<p class="' . $success . '">Click ' . $key . ': ' . $var . '</p>';
+                $content .= '<tr class="';
+                if (isset($success) && $success=="true"){
+                    $content .= $success;
+                } else {
+                    $content .= 'false';
+                }
+                $content .= '"><td>Click ' . $key . '</td><td>' . $var . '</td></tr>';
             }
         ?>
     </head>
     <body>
         <div class="container">
             <p><?php echo $user; ?>'s Results for <?php echo $video; ?></p>
-            <?php echo $content; echo '<br><pre>';print_r($params);echo '</pre>';?>
+            <table>
+                <?php echo $content; ?>
+            </table>
         </div>
     </body>
 </html>
