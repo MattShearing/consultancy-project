@@ -29,13 +29,13 @@
                         <div class="login-box">
                             
                             <div>
-                                <p>Username:</p>
-                                <p><span class="error">Required field</span><br>
+                                <p><label for="username">Username:</label>
+                                <span class="error">Required field</span><br>
                                 <input type="text" name="username" id="username" required placeholder="Username"></p>
                                 
 
-                                <p>Password:</p>
-                                <p><span class="error">Required field</span><br>
+                                <p<label for="password">Password:</label>
+                                <span class="error">Required field</span><br>
                                 <input type="password" name="password" id="password" required placeholder="Password"></p>
                 
                             </div>
