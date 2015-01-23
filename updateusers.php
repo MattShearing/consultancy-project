@@ -32,7 +32,7 @@
 
 	    			while ($row =mysqli_fetch_array($result)) { ?>
 	    			<tr>
-	    				<td><a href="updateusersdetails.php"><?php echo $row ['username']; ?></a></td>
+	    				<td><?php echo '<a href="updateusersdetails.php?user='.$row ['username'].'">'.$row ['username'].'</a>'; ?></a></td>
 	    				<td><?php echo $row ['fname']; ?></td>
 	    				<td><?php echo $row ['sname']; ?></td>
 	    				<td><?php if (isset($row ['studentid']) && $row ['studentid'] != '0') {
