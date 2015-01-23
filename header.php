@@ -4,6 +4,9 @@
 <meta name="viewport" content="width=device-width">
 <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script language="javascript" type="text/javascript" src="assets/js/function.js"></script>
+
 <?php
 if (isset($_GET['logout'])) {
 	$log = logout();

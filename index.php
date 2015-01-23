@@ -24,20 +24,23 @@
 
                 else { ?>
                     
-                    <form action="user-login.php" method="POST">
+                    <form name="user-login" id="user-login" action="user-login.php" method="POST">
    
                         <div class="login-box">
                             
                             <div>
                                 <p>Username:</p>
-                                <p><input type="text" name="username" id="username" /></p>
-                
+                                <p><span class="error">Required field</span><br>
+                                <input type="text" name="username" id="username" required placeholder="Username"></p>
+                                
+
                                 <p>Password:</p>
-                                <p><input type="password" name="password" id="password" /></p>
+                                <p><span class="error">Required field</span><br>
+                                <input type="password" name="password" id="password" required placeholder="Password"></p>
                 
                             </div>
         
-                        <p><input name="submit" type="submit" value="Submit"/></p>
+                        <p><input name="submit" type="submit" value="Submit"></p>
     
                         </div>
 
