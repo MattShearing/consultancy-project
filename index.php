@@ -17,7 +17,7 @@
                 if (isset($user)) {?>
                     <ul>
                        <li><a href="listings.php">Videos</a></li>
-                       <li><a href="#">Reports</a></li>
+                       <li><a href="reportlistings.php">Reports</a></li>
                        <li><a href="myaccount.php">My Account</a></li>
                     </ul> <?php
                 }   
