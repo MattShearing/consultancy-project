@@ -12,9 +12,11 @@
     <body>
         <div class="container">
             <?php
-                $vid_id = $_GET["param"];
-                if ($vid_id == "success") {
-                    echo "<p>Parameters have been added successfully.</p>";
+                if (isset($_GET["param"])) { 
+                    $vid_id = $_GET["param"];
+                    if ($vid_id == "success") {
+                        echo "<p>Parameters have been added successfully.</p>";
+                    }
                 }
             ?>
             <ul>
