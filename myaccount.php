@@ -16,23 +16,23 @@
             <?php if ($_SESSION['level'] == '1') { ?>
 
                 <!-- Adminstrator users can access all -->
-                <li><a href="#">Create Class</a></li>
+                <li><a href="createclass.php">Create Class</a></li>
                 <?php }
 
                 if ($_SESSION['level'] == '1' OR $_SESSION['level'] == '2') { ?>
 
 
                 <!-- Teachers users can access the below -->
-                <li><a href="#">Upload Video</a></li>
+                <li><a href="uploadvideo.php">Upload Video</a></li>
                 <li><a href="parameters.php">Edit Video Parameters</a></li>
                 <li><a href="register.php">Register Users</a></li>
-                <li><a href="#">Register Class Members</a></li>
-                <li><a href="#">Update Users</a></li>
+                <li><a href="registerclassmember.php">Register Class Members</a></li>
+                <li><a href="updateusers.php">Update Users</a></li>
 
                 <?php } ?>
 
                 <!-- Users can access all -->
-                <li><a href="#">Change Password</a></li>
+                <li><a href="changepassword.php">Change Password</a></li>
             </ul>
         </div>
     </body>
