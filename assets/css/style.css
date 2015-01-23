@@ -8,6 +8,25 @@ body{
 	margin:0;
 }
 
+h1 {
+	font-size: 1.5em;
+}
+
+h2 {
+	font-size: 1em;
+}
+table {
+    border-collapse: collapse;
+}
+
+table, td, th {
+    border: 1px solid black;
+}
+
+td {
+	padding: 4px;
+}
+
 .container {
 	width:50%;
 	margin:auto;
@@ -66,6 +85,21 @@ padding-top: 10;
 	padding: 10px;
 	margin-top: 10px;
 }
+
+.update-box {
+	margin: auto;
+	top: 50px;
+	width: 480px;
+	border:outset#efefef;
+	padding: 10px;
+	margin-top: 10px;
+}
+
+.new-details, .current-details {
+width: 50%;
+float: left;
+}
+
 span.error {
 	display: none;
 	color: red;
