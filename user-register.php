@@ -9,11 +9,13 @@ $data = array();
 		if ($key == 'password') {
 			$password = md5($posted);
 		} else {
-			$data[] = $posted;
+			if ($key != 'cfmpassword') {
+				$data[] = $posted;
+			}
 		}
 	}
 
-	$sql = "INSERT INTO users (username, fname, sname, studentid, permission, password) VALUES (";
+	$sql = "INSERT INTO users (fname, sname, studentid, permission, username, password) VALUES (";
 		foreach ($data as $var) {
 		$sql .= "'".$var."', ";
 	}

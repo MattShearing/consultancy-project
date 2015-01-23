@@ -27,25 +27,9 @@ $(window).load(function() {
     }
   });
 
+
 // Register form validation
 
-
- $('form#user-register').find('input[type="submit"]').click (function() {
-    if ($('input#username').val().length == 0) {
-      $('input#username').siblings('span.error').css("display","block");
-      return false;
-    } else {
-      $('input#username').siblings('span.error').css("display","none");
-    }
-  });
-  $('form#user-register').find('input[type="submit"]').click (function() {
-    if ($('input#password').val().length == 0) {
-      $('input#password').siblings('span.error').css("display","block");
-      return false;
-    } else {
-      $('input#password').siblings('span.error').css("display","none");
-    }
-  });
 $('form#user-register').find('input[type="submit"]').click (function() {
     if ($('input#fname').val().length == 0) {
       $('input#fname').siblings('span.error').css("display","block");
@@ -62,14 +46,6 @@ $('form#user-register').find('input[type="submit"]').click (function() {
       $('input#sname').siblings('span.error').css("display","none");
     }
   });
-$('form#user-register').find('input[type="submit"]').click (function() {
-    if ($('input#studentid').val().length == 0) {
-      $('input#studentid').siblings('span.error').css("display","block");
-      return false;
-    } else {
-      $('input#studentid').siblings('span.error').css("display","none");
-    }
-  });
   $('form#user-register').find('input[type="submit"]').click (function() {
     if ($('input#permission').val().length == 0) {
       $('input#permission').siblings('span.error').css("display","block");
@@ -79,4 +55,38 @@ $('form#user-register').find('input[type="submit"]').click (function() {
     }
   });
 
+  $('form#user-register').find('input[type="submit"]').click (function() {
+    if ($('input#username').val().length == 0) {
+      $('input#username').siblings('span.error').css("display","block");
+      return false;
+    } else {
+      $('input#username').siblings('span.error').css("display","none");
+    }
+  });
+  $('form#user-register').find('input[type="submit"]').click (function() {
+    if ($('input#password').val().length == 0) {
+      $('input#password').siblings('span.error').css("display","block");
+      return false;
+    } else {
+      $('input#password').siblings('span.error').css("display","none");
+    }
+  });
+  $('form#user-register').find('input[type="submit"]').click (function() {
+    if ($('input#cfmpassword').val().length == 0) {
+      $('input#cfmpassword').siblings('span.error').css("display","block");
+      return false;
+    } else {
+      $('input#cfmpassword').siblings('span.error').css("display","none");
+    }
+  });
+
+  $('form#user-register').find('input[type="submit"]').click (function() {
+    if ($('input#password').val() == $('input#cfmpassword').val() ) {
+
+    } else {
+      alert('Please enter a matching password into both fields');
+      return false;
+    }
+  });
+  
 });
