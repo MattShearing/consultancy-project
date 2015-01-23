@@ -11,6 +11,12 @@
    
     <body>
         <div class="container">
+            <?php
+                $vid_id = $_GET["param"];
+                if ($vid_id == "success") {
+                    echo "<p>Parameters have been added successfully.</p>";
+                }
+            ?>
             <ul>
 
             <?php if ($_SESSION['level'] == '1') { ?>
