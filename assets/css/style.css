@@ -31,6 +31,10 @@ tr.false {
 	color: red;
 }
 
+tr.true {
+	color: green;
+}
+
 .container {
 	width:50%;
 	margin:auto;
