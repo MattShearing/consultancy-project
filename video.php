@@ -20,7 +20,8 @@
         } ?>
         <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
         <iframe class="under" id="player" height="45%" width="100%" src="<?php echo $url;?>?enablejsapi=1&rel=0&controls=0&origin=http://uocvideo.sytes.net"></iframe>
-        <span class="over" onClick="setTime()">&nbsp;</span>
+        <span id="over" class="over" onClick="setTime()">&nbsp;</span>
+        <p>Clicks Recorded: <span id="recorded">0</span></p>
         <form method="POST" action="submit.php">
             <input type="text" id="vid_id" name="vid_id" class="hidden" value="<?php echo $vid_id; ?>">
             <p id="display_time"></p>
@@ -60,6 +61,11 @@
                 player.stopVideo();
             }
             function setTime() {
+                count = document.getElementById("recorded").innerHTML;
+                count = +count + 1;
+                document.getElementById("recorded").innerHTML = count;
+                document.getElementById("over").style.cursor="progress";
+                setTimeout(function(){document.getElementById("over").style.cursor="default"},500);
                 timestamp = player.getCurrentTime();
                 //if (timestamp - old_timestamp < 1second) {
                     //return false
