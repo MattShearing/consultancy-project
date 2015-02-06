@@ -38,6 +38,7 @@
                         if ($within == "true") {
                             if ($var < $value) {
                                 $success = "true";
+                                $percentage[] = $point . " Correct";
                             }
                         }
                     }
