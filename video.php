@@ -19,12 +19,12 @@
             }
         } ?>
         <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
-        <iframe id="player" height="45%" width="100%" src="<?php echo $url;?>?enablejsapi=1&origin=http://uocvideo.sytes.net"></iframe>        
-        <button onClick="setTime()">Click</button>
+        <iframe class="under" id="player" height="45%" width="100%" src="<?php echo $url;?>?enablejsapi=1&rel=0&controls=0&origin=http://uocvideo.sytes.net"></iframe>
+        <span class="over" onClick="setTime()">&nbsp;</span>
         <form method="POST" action="submit.php">
             <input type="text" id="vid_id" name="vid_id" class="hidden" value="<?php echo $vid_id; ?>">
             <p id="display_time"></p>
-            <input type="submit" id="submit">
+            <input class="hidden" type="submit" id="submit">
         </form> 
     </div> 
         <script>

@@ -90,6 +90,15 @@ padding-top: 10;
 	margin-top: 10px;
 }
 
+.over {
+	position: fixed;
+	z-index: 3;
+	height: 100%;
+	width: 100%;
+	top: 40px;
+	left: 0px;
+}
+
 .update-box {
 	margin: auto;
 	top: 50px;
