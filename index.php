@@ -19,6 +19,7 @@
                        <li><a href="listings.php">Videos</a></li>
                        <li><a href="reportlistings.php">Reports</a></li>
                        <li><a href="myaccount.php">My Account</a></li>
+                       <li><a href="/documentation">Documentation</a></li>
                     </ul> <?php
                 }   
 
