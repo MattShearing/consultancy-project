@@ -1,0 +1,54 @@
+Video Tutorials
+
+How do I start the video assessment? 
+
+To start a video assessment, from the home screen select 'Videos' and select the video for the assessment you would like to start from the list. - These are only viewable for courses you are enrolled on.
+
+How do I know when a click is registered?
+
+Firstly you will be able to see a click count underneath the video window, with each click the count will increment by 1. In addition to this you will see the loading cirlce next to the cursor.
+
+What do I do at the end of the video?
+
+No action needs to be taken, at the end of the video your results will be automatically saved and then displayed for you to revew. 
+
+
+
+Reports
+
+I've done it multiple times, from which time am I seeing scores from?
+
+What do the results mean? 
+
+How do I get a better score?
+  
+
+My Account
+
+How do I create new users? (Administrators/Tutors)
+
+To create a new user, from the home screen select 'My Account' and select 'Register User'. Here fill out the form, see below for example (create screen shot with example data). If the user is an Administrator then there will be an extra field to assign the user a level, 1 - Administrator  2 - Tutor 3 - Student.     
+
+How do I create a class? (Adminisrators)
+
+To create a new class, from the home screen select 'My Account' and select 'Create Class'. Here complete the form, see below for example (create screen shot with example data).
+
+How do I add users to a class? (Administrators/Tutors) 
+
+To add a user to a class, from the home screen select 'My Account' and select 'Register Class Members'. Here complete the form, see below for example (create screen shot with example data).
+
+How do I update a users details? (Administrators/Tutors)
+
+How do I upload a video? (Administrators/Tutors)
+
+What do I do to set the click points on a video? (Administrators/Tutors)
+
+How do I change my password? (Administrators/Tutors/Student)
+
+
+
+When a video is selected you will be prompted by a on screen prompt which explains when and where to click. 
+
+After viewing the screen prompts the video will start automatically, as you click you will see a click count which will increment with each click made. 
+
+  
