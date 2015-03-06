@@ -66,6 +66,24 @@
             $correct_points = count($correct);
             $percentage_points = number_format($correct_points / $click_points * 100, 2);
             $difference = number_format((end($data) - $data[1])/(count($data)-1), 2);
+            $point=array();
+            for ($i=1; $i <= $click_points; $i++) {
+                $i = $i.'';
+                foreach ($percentage as $item) {
+                    if (strpos($item, $i) !== false) {
+                        $point[$i][] = $item;
+                    }
+                }
+                if (isset($point[$i]) && $point[$i] <> '') {
+                    $point[$i] = count($point[$i]);
+                    if ($point[$i] >= 5) {
+                        $point[$i] = 5;
+                    }
+                }
+                $i = (int)$i;
+            }
+            $marks = array_sum($point);
+            $available = $click_points * 5;
         ?>
     </head>
     <body>
@@ -78,31 +96,10 @@
             <p>Points Identified Correctly: <?php echo $correct_points;?></p>
             <p>Percentage Points: <?php echo $percentage_points;?>%</p>
             <p>Average time between clicks: <?php echo $difference; ?>s</p>
+            <p>Marks: <?php echo $marks; ?> / <?php echo $available; ?></p>
             <table>
                 <?php echo $content;?>
             </table>
         </div>
     </body>
 </html>
-
-<?php
-
-// //$array1;
-// $array2 = $data;
-
-// foreach ($array1 as $key => $value1) {
-//     foreach ($array2 as $key => $value2) {
-//     //value2 = clicktime
-//     // value1[0] = start
-//     //value1[1] = end
-//         if ($key = 'times') { 
-//             if ($value2 > $value1[0] AND $value2 < $value1[1] AND !isset($correct)) {
-//                 $correct = 'yes';
-//             } else {
-//                 $correct = 'false';
-//             }
-//         }
-//     }
-// }
-
-?>
