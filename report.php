@@ -84,19 +84,27 @@
             }
             $marks = array_sum($point);
             $available = $click_points * 5;
+            $total_percent = number_format($marks / $available * 100, 2);
         ?>
     </head>
     <body>
         <div class="container">
             <p><?php echo $username; ?>'s Results for <?php echo $video; ?></p>
-            <p>Total Clicks: <?php echo $key; ?></p>
-            <p>Correct Clicks: <?php echo $percentage_count; ?></p>
-            <p>Percentage of clicks correct: <?php echo $percent_amount; ?>%</p>
-            <p>Click Points: <?php echo $click_points; ?></p>
-            <p>Points Identified Correctly: <?php echo $correct_points;?></p>
-            <p>Percentage Points: <?php echo $percentage_points;?>%</p>
-            <p>Average time between clicks: <?php echo $difference; ?>s</p>
+            <?php
+                if ($_SESSION['level'] == '1' OR $_SESSION['level'] == '2') {
+            ?>
+                <p>Total Clicks: <?php echo $key; ?></p>
+                <p>Correct Clicks: <?php echo $percentage_count; ?></p>
+                <p>Percentage of clicks correct: <?php echo $percent_amount; ?>%</p>
+                <p>Click Points: <?php echo $click_points; ?></p>
+                <p>Points Identified Correctly: <?php echo $correct_points;?></p>
+                <p>Percentage Points: <?php echo $percentage_points;?>%</p>
+                <p>Average time between clicks: <?php echo $difference; ?>s</p>
+            <?php
+                }
+            ?>
             <p>Marks: <?php echo $marks; ?> / <?php echo $available; ?></p>
+            <p>Final Score <?php echo $total_percent; ?>%</p>
             <table>
                 <?php echo $content;?>
             </table>
