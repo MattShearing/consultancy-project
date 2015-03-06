@@ -25,5 +25,5 @@ $data = array();
 	} else {
 		echo "Error: " . mysqli_error($con);
 	}
-	echo '<a href="myaccount.php">Back to Account</a>'
+	echo '<br><a href="myaccount.php">Back to Account</a>'
 ?>
