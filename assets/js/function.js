@@ -88,5 +88,38 @@ $('form#user-register').find('input[type="submit"]').click (function() {
       return false;
     }
   });
-  
+  //password update form
+  $('form#user-password').find('input[type="submit"]').click (function() {
+    if ($('input#current_password').val().length == 0) {
+      $('input#current_password').siblings('span.error').css("display","block");
+      return false;
+    } else {
+      $('input#current_password').siblings('span.error').css("display","none");
+    }
+  });
+  $('form#user-password').find('input[type="submit"]').click (function() {
+    if ($('input#new_password').val().length == 0) {
+      $('input#new_password').siblings('span.error').css("display","block");
+      return false;
+    } else {
+      $('input#new_password').siblings('span.error').css("display","none");
+    }
+  });
+  $('form#user-password').find('input[type="submit"]').click (function() {
+    if ($('input#confirm_password').val().length == 0) {
+      $('input#confirm_password').siblings('span.error').css("display","block");
+      return false;
+    } else {
+      $('input#confirm_password').siblings('span.error').css("display","none");
+    }
+  });
+
+  $('form#user-password').find('input[type="submit"]').click (function() {
+    if ($('input#new_password').val() == $('input#confirm_password').val() ) {
+
+    } else {
+      alert('Please enter a matching password into both fields');
+      return false;
+    }
+  });
 });
