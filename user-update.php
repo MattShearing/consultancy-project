@@ -6,22 +6,30 @@ $data = array();
 
 //run a loop to pull out the times 
 	foreach ($_POST as $key => $posted)  {
-		if ($key == 'password') {
+		if ($key == 'old_password') {
 			$password = md5($posted);
 		} else {
-			$data[] = $posted;
+			if ($key == 'password' && isset($posted) && $posted <> '') {
+				$password = md5($posted);
+			} else {
+				if ($key == 'entry_id') {
+					$entry_id = $posted;
+				} else {
+					$data[$key] = $posted;
+				}
+			}
 		}
 	}
 
-	$sql = "INSERT INTO users (username, fname, sname, studentid, permission, password) VALUES (";
-		foreach ($data as $var) {
-		$sql .= "'".$var."', ";
+	$sql = "UPDATE users SET ";
+		foreach ($data as $key => $var) {
+		$sql .= $key."='".$var."', ";
 	}
-	$sql .= "'".$password."')";
-
+	$sql .= "password='".$password."' ";
+	$sql .= "WHERE entry_id='".$entry_id."';";
 
 	if (mysqli_query($con, $sql)) {
-		echo "New record created succesfully";
+		echo "User succesfully updated";
 	} else {
 		echo "Error: " . mysqli_error($con);
 	}

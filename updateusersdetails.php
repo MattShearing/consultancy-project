@@ -38,7 +38,8 @@
 	                	<tr>
 	                		<td>Password</td>
 	                		<td>**********</td>
-	                		<td><input type="text" name="password" id="password" value=""></td>
+	                		<input type="hidden" name="old_password" id="old_password" value="<?php echo $row ['password']; ?>">
+	                		<td><input type="password" name="password" id="password" value=""></td>
 	                	</tr>  
 
 	       				<tr>
@@ -69,6 +70,7 @@
 	                			<td><input type="text" readonly name="permission" id="permission" value="<?php echo $row ['permission']; ?>"></td>
 	                		<?php } ?>
 	                	</tr>
+	                	<input type="hidden" name="entry_id" id="entry_id" value="<?php echo $row ['entry_id']; ?>">
 
 	                	<?php } ?>
 	                </table>
