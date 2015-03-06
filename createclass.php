@@ -2,6 +2,7 @@
 
 <?php
     include 'header.php';
+    $result = mysqli_query($con, "SELECT * FROM users WHERE permission = 2");
 ?>
 
     <title>Home</title>
@@ -20,12 +21,15 @@
 	                    <input type="text" name="course" id="course" required placeholder="Course"></p>
 
 	                    <p><label for="tutor">Tutor:</label>
-	                    <span class="error">Required field</span><br>
-	                    <input type="text" name="tutor" id="tutor" required placeholder="Tutor"></p>
+						<select name="tutor" id="tutor">
+						<?php while ($row = mysqli_fetch_array($result)) {
+                        	echo '<option value="'.$row['username'].'">'.$row['username'].'</option>';
+                    	} ?>
+						</select>
 
 	                </div>
 
-	            <p><input type="submit" value="Submit"/></p>
+	            <p><input type="submit" value="Create"/></p>
 
 	            </div>
 
